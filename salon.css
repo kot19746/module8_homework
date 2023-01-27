@@ -1,0 +1,75 @@
+.wrapper {
+background-image: url("./images/Background.jpg");
+background-size: cover;
+}
+
+.h1, .text {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 36px;
+  color: red;
+}
+
+.text {
+ color:gold;
+ margin: 30px;
+ padding-top: 30px;
+ padding-left: 100px;
+}
+
+.image {
+  background-image: url("./images/President.jpg");
+  background-size: cover;
+  width: 700px;
+  height: 500px;
+  border: solid 10px;
+  border-color: gold;
+  transition: 0.7s ease 0.5s;
+}
+
+.prev, .next {
+  justify-content: center;
+  width: 200px;
+  height: 50px;
+  background-color: rgb(221, 224, 18);
+  color: #d80808;
+  font-size: 16px;
+  margin: 30px;
+  border-radius: 5px;
+  border: none;
+}
+
+.prev:hover, .next:hover {
+  color: rgb(9, 187, 9);
+}
+
+/*Addiction of points*/
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ccc;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.slider__arrow {
+  display: flex;
+  align-items: center;  
+}
+
+.dots-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  background: transparent;
+  color: #fff;
+  font-size: 40px;
+  cursor: pointer;
+  margin-top: 40px;
+  padding-left: 10px;
+}
+
+.dot.active, 
+.dot:hover {
+  background: rgb(46, 43, 43);
+}
