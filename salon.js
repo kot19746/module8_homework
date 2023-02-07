@@ -24,7 +24,8 @@ const salons = [
     text.innerText = salons[index].text
     img.style.backgroundImage = `url(${salons[index].img})`
   }
-  
+
+  let dots = document.querySelectorAll('.dot');
   const prev = document.querySelector('.prev')
   const next = document.querySelector('.next')
   let currentIndex = 0;
@@ -36,8 +37,10 @@ const salons = [
       currentIndex -= 1;
     }
     setSalon(currentIndex);
+    dots[currentIndex].classList.add("active");
+    dots[currentIndex + 1].classList.remove("active")
   })
-  
+ 
   next.addEventListener('click', () => {
     if (currentIndex === 3) {
       currentIndex = 0;
@@ -45,28 +48,9 @@ const salons = [
       currentIndex += 1;
     }
     setSalon(currentIndex);
+    dots[currentIndex].classList.add("active");
+    dots[currentIndex - 1].classList.remove("active")
   })
-
-  /*Addiction of points*/
-   const dots = document.querySelectorAll('.dot');
-   
-   const activDot = (currentIndex) => {
-    for (dot of dots) {
-        dot.classList.remove('active');
-    }
-    dots[currentIndex].classList.add('active');
-  }
-   activDot(currentIndex);
-
-    dot.addEventListener('click', () => {
-    if (currentIndex === 3) {
-      currentIndex = 0;
-    } else {
-      currentIndex += 1;
-    } 
-    activDot(currentIndex);
-  })
- 
 
 
 
